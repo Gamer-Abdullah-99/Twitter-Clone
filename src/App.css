@@ -1,0 +1,332 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* background-color: black; */
+  user-select: none;
+}
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  height: 40px;
+  font-family: serif;
+  font-size: 20px;
+  user-select: none;
+  position: fixed;
+  top: 0%;
+  border-bottom: 1px solid black;
+}
+#navbar li {
+  list-style: none;
+}
+#navbar a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: orange;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  background-color: inherit;
+}
+#navbar button {
+  text-decoration: none;
+  font-weight: bolder;
+  color: orange;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: serif;
+}
+#navbar button:hover {
+  color: red;
+  cursor: pointer;
+}
+#navbar a:hover {
+  color: red;
+  cursor: pointer;
+}
+#signup {
+  border: 2px solid white;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 55vh;
+  align-items: center;
+  box-shadow: 0px 0px 100px orange;
+  border-radius: 15px;
+  user-select: none;
+  margin: 100px auto;
+}
+#signup a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: orange;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  background-color: inherit;
+}
+#signup a:hover {
+  color: red;
+  cursor: pointer;
+}
+#form-error {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+#signup-heading {
+  background-image: linear-gradient(
+    45deg,
+    rgb(255, 0, 0),
+    rgb(255, 145, 0),
+    rgb(255, 0, 0)
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-family: cursive;
+}
+#signup-sub-heading {
+  color: orange;
+  margin: 10px;
+  font-family: sans-serif;
+}
+input {
+  border: 2px solid orange;
+  box-shadow: none;
+  border-radius: 5px;
+  height: 25px;
+  padding: 5px;
+}
+input:focus {
+  outline: none;
+  border-color: orangered;
+  box-shadow: 0 0 5px orangered;
+}
+#form-btn {
+  border: 2px solid orange;
+  border-radius: 10px;
+  padding: 10px;
+  color: orange;
+  font-family: cursive;
+  font-weight: bold;
+  background-color: inherit;
+  font-size: 15px;
+  transition: all 0.5s ease-in-out;
+}
+#form-btn:hover {
+  color: white;
+  border: 2px solid orangered;
+  background-color: orangered;
+  cursor: pointer;
+}
+#toLogin {
+  font-weight: normal;
+}
+#login {
+  border: 2px solid white;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 45vh;
+  align-items: center;
+  box-shadow: 0px 0px 100px orange;
+  border-radius: 15px;
+  user-select: none;
+  margin: 100px auto;
+}
+#login a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: orange;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  background-color: inherit;
+}
+#login a:hover {
+  color: red;
+  cursor: pointer;
+}
+#form-error {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+#home {
+  border: 1px solid black;
+  width: 52.1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  /* box-shadow: 0px 0px 100px orange; */
+  /* border-radius: 15px; */
+  user-select: none;
+  position: absolute;
+  top: 40px;
+  left: 18%;
+}
+#left-sidebar {
+  width: 15%;
+  /* border-right: 1px solid black; */
+  border-top: 1px solid black;
+  position: fixed;
+  left: 0px;
+  height: 100vh;
+  top: 40px;
+  font-size: 20px;
+  line-height: 50px;
+  padding: 20px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: orange;
+  border-collapse: collapse;
+}
+#left-sidebar li {
+  list-style: none;
+}
+#left-sidebar a {
+  border-radius: 20px;
+  padding: 7px;
+}
+#left-sidebar a:hover {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+#right-sidebar {
+  width: 29.8%;
+  /* border-left: 1px solid black; */
+  border-top: 1px solid black;
+  position: fixed;
+  right: 0px;
+  height: 100vh;
+  top: 40px;
+}
+#right-sidebar-1 {
+  width: 90%;
+  border: 1px solid black;
+  margin: 0px auto;
+  color: orange;
+  border-radius: 20px;
+  /* padding: 10px; */
+  text-align: center;
+}
+#right-sidebar-1 div {
+  height: 70px;
+  width: 100%;
+  padding: 0px 0px 10px 0px;
+  /* padding-left: 5px; */
+  /* border: 2px solid black; */
+  /* padding: 5px; */
+}
+#right-sidebar-1 div:hover {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  border-radius: inherit;
+}
+#right-sidebar-2 {
+  width: 70%;
+  border: 1px solid black;
+  margin: auto;
+  color: orange;
+  border-radius: 20px;
+  margin-top: 20px;
+  /* padding: 10px; */
+  text-align: center;
+  padding: 0px 10% 2% 10%;
+}
+#right-sidebar-2 div {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+#right-sidebar-2 div span {
+  flex-direction: row;
+  /* width: 100px; */
+  justify-content: center;
+  align-items: center;
+}
+#right-sidebar-2 img {
+  width: 40px;
+}
+#right-sidebar-2 button {
+  border-radius: 20px;
+  height: 40px;
+  width: 60px;
+  border: none;
+  background-color: orange;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+#right-sidebar-2 button:hover {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  border-radius: 20px;
+}
+#add-tweet {
+  position: absolute;
+  top: 20px;
+  /* border-bottom: 1px solid black; */
+  width: 90%;
+  padding: 5px auto;
+}
+textarea {
+  border: 2px solid orange;
+  box-shadow: none;
+  border-radius: 5px;
+  height: 25px;
+  padding: 5px;
+  width: 97.6%;
+  height: 100px;
+}
+textarea:focus {
+  outline: none;
+  border-color: orangered;
+  box-shadow: 0 0 5px orangered;
+}
+#add-tweet button {
+  border-radius: 20px;
+  height: 40px;
+  width: 60px;
+  border: none;
+  background-color: orange;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  left: 90%;
+}
+#add-tweet button:hover {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  border-radius: 20px;
+}
+#my-tweets {
+  border: 1px solid black;
+  width: 52.1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  /* box-shadow: 0px 0px 100px orange; */
+  /* border-radius: 15px; */
+  user-select: none;
+  position: absolute;
+  top: 40px;
+  left: 18%;
+}
