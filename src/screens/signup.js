@@ -29,7 +29,6 @@ export default function Signup() {
         email,
         password
       );
-      dispatch({ type: "AUTH_USER", payload: user.uid });
       console.log(user);
       await setDoc(doc(db, "users", user.uid), {
         username,

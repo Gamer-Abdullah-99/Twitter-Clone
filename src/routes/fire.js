@@ -12,6 +12,9 @@ import {
   addDoc,
   doc,
   setDoc,
+  getDoc,
+  getDocs,
+  query,
 } from "firebase/firestore";
 
 const firebaseApp = initializeApp({
@@ -38,4 +41,7 @@ export {
   setDoc,
   doc,
   onAuthStateChanged,
+  getDoc,
+  getDocs,
+  query
 };

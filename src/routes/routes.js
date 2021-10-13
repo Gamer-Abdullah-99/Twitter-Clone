@@ -14,31 +14,46 @@ import LeftSidebar from "../components/sidebar-left";
 import RightSidebar from "../components/sidebar-right";
 import MyTweets from "../screens/my-tweets";
 import MyProfile from "../screens/my-profile";
-// import { auth, onAuthStateChanged } from "./fire";
+import { auth, onAuthStateChanged, doc, db, getDoc } from "./fire";
 
 export default function Routes() {
   const { state, dispatch } = useContext(GlobalContext);
 
   let history = useHistory();
 
-  // useEffect(() => {
-  //   onAuthStateChanged(auth, (user) => {
-  //     if (user) {
-  //       const uid = user.uid;
-  //       dispatch({ type: "AUTH_USER", payload: uid });
-  //       history.push("/");
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        fetchUserInfo(user.uid);
+      }
+      else {
+        console.log('user not found');
+      }
+    })
+  }, []);
+
+  const fetchUserInfo = async (uid) => {
+    let userRef = doc(db, 'users', uid);
+    let userInfo = await getDoc(userRef);
+    userInfo = userInfo.data();
+    console.log(userInfo);
+    dispatch({ type: "AUTH_USER", payload: userInfo });
+  }
 
   return (
     <Router>
       <div>
-        {/* {Object.entries(state.authUser).length !== 0 &&
-          ((<Nav />), (<LeftSidebar />))} */}
-        <Nav />
+        {Object.entries(state.authUser).length !== 0 &&
+          (
+            <>
+              <Nav />
+              <LeftSidebar />
+              <RightSidebar />
+            </>
+          )}
+        {/* <Nav />
         <LeftSidebar />
-        <RightSidebar />
+        <RightSidebar /> */}
         <Switch>
           <Route path="/signup">
             <Signup />
@@ -46,15 +61,22 @@ export default function Routes() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/my-tweets">
-            <MyTweets />
-          </Route>
-          <Route exact path="/my-profile">
-            <MyProfile />
-          </Route>
+          {/* {Object.entries(state.authUser).length !== 0 ?
+            ( */}
+          <>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/my-tweets">
+              <MyTweets />
+            </Route>
+            <Route exact path="/my-profile">
+              <MyProfile />
+            </Route>
+          </>
+          {/* // ) : (
+            //   history.push("/login")
+            // )} */}
         </Switch>
       </div>
     </Router>

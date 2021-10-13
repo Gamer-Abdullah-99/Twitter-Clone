@@ -17,7 +17,6 @@ export default function Login() {
   async function login() {
     try {
       let data = await signInWithEmailAndPassword(auth, email, password);
-      dispatch({ type: "AUTH_USER", payload: data.user.uid });
       console.log(data);
       history.push("/");
     } catch (err) {
