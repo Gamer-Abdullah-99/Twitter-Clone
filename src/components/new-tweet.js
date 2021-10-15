@@ -30,7 +30,7 @@ export default function NewTweet() {
 
   return (
     <div id="add-tweet">
-      <textarea placeholder="What's On Your Mind" value={tweet} onChange={(a) => { setTweet(a.target.value) }} />
+      <textarea placeholder="What's On Your Mind" maxLength="250" value={tweet} onChange={(a) => { setTweet(a.target.value) }} />
       <br />
       <button onClick={addtweet}>Tweet</button>
     </div>

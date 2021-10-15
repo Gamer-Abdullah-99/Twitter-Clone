@@ -1,5 +1,6 @@
 export let data = {
   authUser: {},
+  allTweets: []
 };
 
 export function reducer(state, action) {
@@ -18,6 +19,16 @@ export function reducer(state, action) {
         authUser: {},
       };
     }
+    case "ALL_TWEETS": {
+      console.log(state.allTweets)
+      state.allTweets.push(action.payload);
+      return {
+        ...state,
+        // allTweets: action.payload,
+
+      };
+    }
+
     default:
       return state;
   }

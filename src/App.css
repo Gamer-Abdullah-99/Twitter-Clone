@@ -193,14 +193,16 @@ input:focus {
   color: orange;
   border-collapse: collapse;
 }
-#left-sidebar li {
+#left-sidebar ul li {
   list-style: none;
-}
-#left-sidebar a {
   border-radius: 20px;
   padding: 7px;
+  width: 70%;
+  /* display: inline-flex;
+  align-content: center; */
 }
-#left-sidebar a:hover {
+/* #left-sidebar li  */
+#left-sidebar li:hover {
   color: white;
   background-color: red;
   cursor: pointer;
@@ -318,6 +320,24 @@ textarea:focus {
   cursor: pointer;
   border-radius: 20px;
 }
+#all-tweets {
+  width: 90%;
+}
+#tweets {
+  border: solid 1px orange;
+  width: 100%;
+  box-shadow: 0 0 5px orange;
+}
+#tweets span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#tweet-author {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
 #my-tweets {
   border: 1px solid black;
   width: 52.1%;
@@ -332,4 +352,16 @@ textarea:focus {
   position: absolute;
   top: 40px;
   left: 18%;
+}
+
+@media only screen and (max-width: 1050px) {
+  #right-sidebar {
+    display: none;
+  }
+  #home {
+    width: 80%;
+  }
+  #left-sidebar {
+    width: 32%;
+  }
 }
